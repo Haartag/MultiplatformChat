@@ -1,31 +1,22 @@
 package site.llinsoft.multiplatformchat
 
 import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.navigator.Navigator
-import cafe.adriel.voyager.navigator.tab.CurrentTab
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.Tab
-import cafe.adriel.voyager.navigator.tab.TabNavigator
 import cafe.adriel.voyager.transitions.SlideTransition
-import site.llinsoft.multiplatformchat.screens.main_screen.MainScreen
+import site.llinsoft.multiplatformchat.screens.prompt_screen.PromptScreen
 import site.llinsoft.multiplatformchat.theme.AppTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 internal fun App() = AppTheme {
 
-    Navigator(MainScreen()) { navigator ->
+    Navigator(PromptScreen()) { navigator ->
         SlideTransition(
             navigator = navigator,
         )

@@ -1,5 +1,7 @@
 package site.llinsoft.multiplatformchat.model
 
+import io.github.skeptick.libres.images.Image
+import site.llinsoft.multiplatformchat.Res
 import site.llinsoft.multiplatformchat.db.PromptEntity
 
 data class PromptItem(
@@ -39,18 +41,18 @@ private fun String.makeApiModel(): ApiModel {
 }
 
 enum class PromptType(
-    //val icon: Int,
+    val icon: Image,
 ) {
     TRANSLATE(
-        //icon = R.drawable.baseline_translate_24
+        icon = Res.image.ic_translate
     ),
     CODE(
-        //icon = R.drawable.baseline_code_24
+        icon = Res.image.ic_code
     ),
     CHAT(
-        //icon = R.drawable.baseline_chat_24
+        icon = Res.image.ic_chat
     ),
     LETTER(
-        //icon = R.drawable.baseline_mail_24
+        icon = Res.image.ic_mail
     )
 }
